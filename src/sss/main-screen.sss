@@ -1,0 +1,99 @@
+.main-screen
+	position: relative
+
+	&__cont
+		margin: 85px 0 185px
+
+	&__bg
+		position: absolute calc(100% - 80px) calc(100% + 150px) * *
+
+		svg
+			display: block
+			max-width: none
+
+	&__links
+		margin: 40px 0 0
+
+.main-text
+	display: flex
+
+	&__text
+		align-self: center
+		margin-right: 65px
+		flex: 1 1 auto
+
+		&-title
+			font-size: 32px
+			margin-bottom: 4px
+
+		&-subtitle
+			margin-bottom: 55px
+
+		.text-page
+			line-height: calc(23 / 16)
+
+	&__waves
+		margin-right: -68px
+		flex: none
+
+.main-links
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__btns
+		display: flex
+		align-items: center
+
+		.white-btn
+
+			&:not(:last-child)
+				margin-right: 45px
+
+.white-btn, .ht-btn
+	display: inline-block
+
+.white-btn
+	color: #000 #fff
+	padding: 14px 23px 15px
+
+.ht-btn
+	border-radius: 100px
+	border: 1px solid #fff
+	padding: 10px 16px
+
+.main-soc
+	display: flex
+	align-items: center
+
+	&__link
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute -10px
+
+		&:not(:last-child)
+			margin-right: 40px
+
+
+@media (max-width: 1400px)
+	.main-screen
+
+		&__cont
+			margin: 20px 0 80px
+
+		&__links
+			margin: 20px 0 0
+
+	.main-text
+
+		&__waves
+			flex: auto
+			margin-right: -25px
+
+		&__text
+			max-width: 450px
+
+			&-subtitle
+				margin-bottom: 30px

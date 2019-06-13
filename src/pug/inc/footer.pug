@@ -1,0 +1,24 @@
+footer.footer
+	.footer__wrap
+		.footer-top
+			.footer__logo
+				a.f-logo(href="#")
+					img(src="img/f-logo.svg")
+			nav.footer__menu
+				each menu in [["Репортажи", "События"], ["Эксклюзив", "Город"], ["Сотрудники", "Вакансии"], ]
+					ul.f-menu
+						each link in menu
+							li
+								a.f-menu__link(href="#")=link
+			.footer__soc
+				.f-soc
+					each name in ["f-vk", "f-fb", "f-inst"]
+						a.f-soc__link(href="#")
+							img(src="img/ico-"+name+".svg")
+		.footer-bot
+			.footer__copy
+				.copy © GeoPro, <br />2019, все права защищены
+			.footer__developer
+				a.dev(href="#" target="_blank")
+					span.dev__text Сделано в
+					img.dev__img(src="img/developer.svg")

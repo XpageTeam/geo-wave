@@ -1,0 +1,178 @@
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title geo - wave
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		aside.mobile-menu
+			.mobile-menu__city
+				.city-select
+					select.city-select__select
+						option(value="0" selected) Челябинск
+						option(value="1") Челябинск
+						option(value="2") Челябинск
+						option(value="3") Челябинск
+			.mobile-menu__search
+				form(action="#")
+					.mobile-search
+						input.mobile-search__input(type="text" placeholder="Поиск")
+						input.mobile-search__submit(type="submit")
+			ul.mobile-menu__list
+				li.mobile-menu__el
+					a.mobile-menu__link.active(href="#") Пункт 1
+				li.mobile-menu__el
+					a.mobile-menu__link(href="#") Пункт 2
+				li.mobile-menu__el
+					a.mobile-menu__link(href="#") Пункт 3
+				li.mobile-menu__el
+					span.mobile-menu__sub-title Заголовок подменю
+					nav.mobile-menu__submenu
+						ul.submenu
+							li.mobile-menu__el
+								a.mobile-menu__link(href="#") Пункт 1
+							li.mobile-menu__el
+								a.mobile-menu__link(href="#") Пункт 2
+							li.mobile-menu__el
+								a.mobile-menu__link(href="#") Пункт 3
+				li.mobile-menu__el
+					a.mobile-menu__link(href="#") Пункт 4
+			.mobile-menu__personal
+				.mobile-pers
+					.mobile-pers__login
+						a(href="#") Вход
+					.mobile-pers__reg
+						a(href="#") Регистрация
+			.mobile-menu__footer
+				.mobile-menu__soc
+					.f-soc
+						each name in ["f-vk", "f-inst", "f-fb"]
+							a.f-soc__link(href="#")
+								img(src="img/ico-"+name+".svg")
+		main#content
+			.main-screen__cont
+				.wrapper
+					.main-screen
+						.main-screen__bg
+							include ../img/ms-bg.svg
+						.main-screen__text
+							.main-text
+								.main-text__text
+									.main-text__text-title 12-14 июля
+									.main-text__text-subtitle Клуб-отель “Золотой пляж”  Миасс оз. Тургояк
+									.text-page
+										p Вот уже в 4 раз на Тургояке пройдет самый летний и сочный музыкальный фестиваль - GEOWAVE! Тебя ожидают 3 дня музыки, отличного настроения и положительных эмоций.
+										p Фестиваль проводиться на площадке клуб-отеля “Золотой пляж”, который расположен на берегу одного из самых чистых и красивых озер России.
+								.main-text__waves
+									include ../img/top-wave.svg
+						.main-screen__links 
+							.main-links
+								.main-links__btns
+									a.white-btn(href="#") Купить билет
+									a.ht-btn(href="#") #geowave
+								.main-links__soc
+									.main-soc
+										each soc in ["vk", "fb", "inst"]
+											a.main-soc__link(href="#")
+												img(src="img/ico-"+soc+".svg")
+			.main-imgs
+				.main-imgs__imgs
+					figure.main-imgs__imgs-img
+						img(src="img/photos/main-imgs-1.jpg")
+					.imgs-list
+						.imgs-list__item
+							figure.main-img
+								img(src="img/photos/main-imgs-0.jpg")
+						.imgs-list__item
+							figure.main-img
+								img(src="img/photos/main-imgs-2.jpg")
+				.main-imgs__bg
+					include ../img/imgs-waves.svg
+			.headlines__cont
+				.wrapper
+					.headlines__title Хедлайнеры Geowave 2019
+					.headlines__subtitle Приехали из разных стран, но говорят на одном языке. Для музыки нет границ и нет рамок. 3 дня для вас будут играть:
+					.headlines__list
+						each item, i in [{name: "Chaim ", country: "israel", text: "CHAIM - артист, чьи прогрессивные ритмы и необычные сочетания стилей закрадываются глубоко в душу и заставляют танцевать. Его релизы можно услышать на таких лейблах, как BPitch Berlon RUMORS, Supplement Facts Records, Saved Records, Cocoon Recordings"}, {name: "Guessbeats", country: "nld", text: "GuessBeats - еще в молодом возрасте этот артист стал заниматься музыкой в стиле house. Постепенно преобразовываясь, его музыка нашла уникальное звучание, которое оценили на фестивале Toren, Circle, Electronic Picknick, где GuessBeats выступал в дуэте с Kidmalone"}, {name: "Fanny West", country: "nld", text: "Fanny West - уникальный музыкант, создающий знойную музыку, которая заставляет танцевать. Вокал, взрывные ритмы делают выступления Fanny West незабываемыми. Постоянный участник фестивалей Parkpop, Lowlands, Latin Village и Pinkpop"}, ]
+							.headlines__list-item
+								.headliner
+									.headliner__img
+										if (i == 0)
+											include ../img/headliner-0.svg
+										else if (i == 1)
+											include ../img/headliner-1.svg
+										else
+											include ../img/headliner-2.svg
+									.headliner__desc
+										.headliner__desc-title
+											.lh-title=item.name
+											if (i == 0)
+												.lh-country=item.country
+											else
+												.lh-country NLD
+										.headliner__desc-text
+											.text-page
+												p=item.text
+										.headliner__desc-soc
+											.hl-soc
+												each soc in ["cloud", "fb", "inst"]
+													a.hl-soc__link(href="#")
+														img(src="img/ico-"+soc+".svg")
+			.main-imgs
+				.main-imgs__imgs
+					figure.main-imgs__imgs-img
+						img(src="img/photos/main-imgs-1.jpg")
+					.imgs-list
+						.imgs-list__item
+							figure.main-img
+								img(src="img/photos/main-imgs-0.jpg")
+						.imgs-list__item
+							figure.main-img
+								img(src="img/photos/main-imgs-2.jpg")
+			.main-contacts__cont
+				.wrapper
+					.main-contacts
+						.main-contacts__text
+							.mc-title
+								.mc-title__title 12-14 июля
+								.mc-title__subtitle Клуб-отель “Золотой пляж”  Миасс оз. Тургояк
+							.mc-links
+								.mc-links__btn
+									a.white-btn(href="#") Купить визу за 3 дня
+								.mc-links__soc
+									.hl-soc
+										each soc in ["vk", "fb", "inst"]
+											a.hl-soc__link(href="#")
+												img(src="img/ico-"+soc+".svg")
+							.contacts
+								.contacts__item
+									.contacts__item-title Проживание
+									.contacts__item-list
+										.contacts-list
+											.contacts-list__item
+												.contacts-list__item-name Клуб-отель “Золотой пляж”
+												.contacts-list__item-pos Бронирование номеров
+												address.contacts-list__item-contacts
+													a(href="tel: +7 3513 29-80-91") +7 3513 29-80-91
+													a(href="mailto: info@goldenbeach.ru") info@goldenbeach.ru
+								.contacts__item
+									.contacts__item-title Контакты
+									.contacts__item-list
+										.contacts-list
+											.contacts-list__item
+												.contacts-list__item-name Анастасия Степанова
+												.contacts-list__item-pos Вопросы по участию в проекте
+												address.contacts-list__item-contacts
+													a(href="tel: +7 932 017 87 16") +7 932 017 87 16
+													a(href="mailto: sd-geo@mail.ru") sd-geo@mail.ru
+											.contacts-list__item
+												.contacts-list__item-name Анна Чащина
+												.contacts-list__item-pos Организационные вопросы
+												address.contacts-list__item-contacts
+													a(href="tel: +7 922 757 23 17") +7 922 757 23 17
+													a(href="mailto: anna-geo@list.ru") anna-geo@list.ru
+						.main-contacts__waves
+							include ../img/bot-waves.svg
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -1,0 +1,106 @@
+.head
+	padding: 71px 0 40px
+
+	&__wrap
+		display: flex
+		align-items: center
+
+	&__nav
+		flex: 1 1 auto
+
+	&__logo
+		position: relative
+		margin-right: 10px
+
+		&-city
+			position: absolute calc(100% + 14px) * * 0
+
+		img
+			display: block
+
+	&__language
+		margin-left: 35px
+
+.main-nav
+	display: flex
+	align-items: center
+
+	&:before
+		content: ""
+		display: inline-block
+		margin-right: auto
+		order: -2
+
+	&__search
+		margin-right: 36px
+	
+	&__menu
+		order: -1
+		margin-right: auto
+
+.search-link, .lc-link
+	display: block
+	background-size: contain !important
+
+.search-link
+	size: 13px 17px
+	background: url("../img/ico-search.svg") no-repeat
+
+.lc-link
+	size: 17px 16px
+	background: url("../img/ico-lc.svg") no-repeat
+
+
+.main-menu
+	display: flex
+
+	li
+
+		&:not(:last-child)
+			margin-right: 77px
+
+	&__link
+		text-transform: uppercase
+
+.language-link
+	display: block
+	background: rgba(0,0,0, .1)
+	border-radius: 50px
+	line-height: 1
+	padding: 7px 14px
+
+.city-select
+
+	&__select
+		color: #fff
+		border: none
+		background: url("../img/ico-select-arrow.svg") right center no-repeat
+		padding-right: 20px
+		cursor: pointer
+
+		option
+			color: #000
+
+	.selectize
+
+		&-input
+			background: none !important
+			box-shadow: none
+			border: none
+			font: inherit
+			color: inherit
+			padding: 0
+
+			&:after
+				display: none !important
+
+			input
+				display: none !important
+
+		&-dropdown
+			padding: 0 !important
+			background: var(--main-color)
+
+@media (min-width: 1000px)
+	.head__burger, .mobile-menu
+		display: none

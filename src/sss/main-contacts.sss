@@ -1,0 +1,68 @@
+.main-contacts
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__cont
+		margin: 0 0 135px
+
+	&__text
+		margin-right: 80px
+
+.mc-title
+	margin: 0 0 60px
+
+	&__title
+		margin: 0
+		font-size: 32px
+		font-weight: bold
+
+.mc-links
+	margin: 0 0 100px
+	display: flex
+
+	&__btn
+		margin-right: 30px
+
+.contacts
+
+	&__item
+
+		&:not(:first-child)
+			margin: 90px 0 0
+
+		&-title
+			text-transform: uppercase
+			font-size: 12px
+			opacity: .5
+			margin: 0 0 8px
+
+.contacts-list
+	display: flex
+
+	&__item
+
+		&:not(:last-child)
+			margin-right: 80px
+
+		&-name
+			font-size: 20px
+			margin: 0 0 4px
+
+		&-pos
+			opacity: .5
+
+		&-contacts
+			margin: 20px 0 0
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+
+			a
+				color: #fff
+
+
+
+@media (max-width: 1400px)
+	.main-contacts__cont
+		margin: 0 0 80px

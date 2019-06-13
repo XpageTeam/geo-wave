@@ -1,0 +1,98 @@
+.title-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&:first-child:not(:last-child)
+		padding: 40px 0 0
+
+	&:first-child:last-child
+		padding: 40px 0
+
+	&__title
+		margin-right: 20px
+
+		h1
+			font-weight: bold
+			font-size: 32px
+			line-height: 1.45
+
+	&__menu
+		flex: none
+
+.title-menu
+	display: flex
+
+	li
+
+		&:not(:last-child)
+			margin-right: 22px
+
+
+@media (max-width: 1000px)
+	.title-block
+		flex-direction: column-reverse
+
+		&__menu
+			position: fixed 75px 0 *
+			z-index: 100
+			background: var(--thrid-color)
+
+		&__title
+			margin: 0 0 35px
+			width: 100%
+
+			&:not(:last-child)
+				padding: 70px 0 0
+
+			h1
+				font-size: 24px
+
+	.title-menu
+
+		li
+			flex: 1 0 auto
+
+			&:not(:last-child)
+				margin-right: 0
+
+		&__link
+			border-radius: 0
+			display: block
+			text-align: center
+			border: none
+			border-bottom: 1px solid transparent
+
+			&:hover, &.active, &:focus
+				background: var(--second-color)
+				border-color: var(--thrid-color)
+
+			&.gray-arrow-btn
+
+				&:after
+					right: auto
+					left: 25px
+					transform: rotate(-135deg)
+
+	.title-menu
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+		&__link
+			padding: 13px 13px 12px
+
+		&__shadow
+			width: 20px
+			position: absolute 0 *
+			pointer-events: none
+			background: linear-gradient(to right, rgba(0,0,0, .0001), rgba(#000, 1))
+			opacity: 0
+			flex: none
+			z-index: 3
+
+			&--left
+				left: 0	
+				transform: rotateZ(180deg)
+
+			&--right
+				right: 0
