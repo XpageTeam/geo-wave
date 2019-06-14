@@ -2,6 +2,16 @@ import $ from "jquery"
 import is from "is_js"
 import mobileMenu from "./mobile-menu.js"
 
+function isScrolledIntoView(elem){
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + 10;
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 window.$ = $;
 window.jQuery = $;
 
@@ -54,6 +64,25 @@ try{
 		// 	},
 		// 	transitionEffect: "slide",
 		// })
+    
+    const hiddenElements = document.querySelectorAll(".main-imgs__imgs-img, .imgs-list__item"),
+      showElement = (el) => {
+        el.classList.add("animated")
+      };
+
+    for (var el of hiddenElements)
+      if (isScrolledIntoView(el))
+        showElement(el)
+
+    $(window).on("scroll resize", function(){
+
+      if (!hiddenElements.length)
+        return
+
+      for (var el of hiddenElements)
+        if (isScrolledIntoView(el))
+          showElement(el)
+    })
 		
 		if (!is.touchDevice())
       $("select:not(.no-selectize)").each((i, el) => {
