@@ -99,6 +99,8 @@
 
 		&__img
 			max-width: 400px
+			display: flex
+			justify-content: center
 
 			svg
 				max-width: 130%
@@ -107,3 +109,53 @@
 			margin-left: 20px
 			width: 500px
 			flex: 1 1 auto
+
+	.headlines
+
+		&__list
+
+			&-item
+				margin: 0 !important
+
+				&:not(:first-child)
+					margin: 10px 0 0 !important
+
+				&:nth-child(odd) 
+
+					.headliner
+
+						&__desc
+							margin-left: 20px
+
+				&:nth-child(even)
+
+					.headliner
+
+						&__desc
+							padding-left: 0
+							margin-right: 20px
+
+@media (max-width: 1000px)
+	.headliner
+
+		&__img
+			max-width: 250px
+
+@media (max-width: 660px)
+	.headliner
+		display: block
+
+		&__img
+			margin-right: 0
+			max-width: 100%
+
+			svg
+				max-width: 200%
+				max-height: 44.6vh
+
+		&__desc
+			margin: 0 !important
+			width: auto !important
+
+			&-soc
+				margin: 20px 0 0

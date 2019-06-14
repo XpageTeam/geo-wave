@@ -97,3 +97,53 @@
 
 			&-subtitle
 				margin-bottom: 30px
+
+@media (max-width: 1300px)
+	.main-screen
+
+		&__cont
+			margin: 20px 0 50px
+
+	.main-text
+
+		&__text
+			width: auto
+			flex: 1 1 auto
+			max-width: none
+
+		&__waves
+
+			svg
+				margin: 0 -40px
+				max-width: 130%
+
+
+@media (max-width: 660px)
+	.main-screen
+
+		&__bg
+			display: none
+
+		&__cont
+			margin: 10px 0 30px
+
+	.main-text
+
+		&__waves
+			display: none
+
+		&__text
+			margin: 0
+
+	.main-links
+		display: block
+
+		&__btns
+
+			.white-btn
+
+				&:not(:last-child)
+					margin-right: 20px
+
+		&__soc
+			margin: 20px 0 0

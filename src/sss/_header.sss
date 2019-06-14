@@ -104,3 +104,37 @@
 @media (min-width: 1000px)
 	.head__burger, .mobile-menu
 		display: none
+
+
+@media (max-width: 1250px)
+	.head
+		padding: 30px 0 40px
+	
+	.main-menu
+
+		li
+
+			&:not(:last-child)
+				margin-right: 30px
+
+@media (max-width: 1000px)
+	.head
+		padding: 20px 0
+
+		&__wrap
+			justify-content: space-between
+
+		&__nav,
+		&__language
+			display: none
+
+		&__logo
+			display: flex
+			align-items: center
+
+			.logo
+				max-width: 90px
+
+			&-city
+				position: static
+				margin-left: 25px

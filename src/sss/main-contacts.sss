@@ -63,6 +63,52 @@
 
 
 
-@media (max-width: 1400px)
+@media (max-width: 1400px) and (min-width: 1400px)
 	.main-contacts__cont
 		margin: 0 0 80px
+
+@media (max-width: 1200px)
+	.main-contacts
+		display: block
+
+		&__cont
+			margin: 0 0 40px
+
+		&__waves
+			display: none
+
+		&__content
+			margin: 0
+
+	.mc-title, .mc-links
+		margin: 0 0 30px
+
+	.contacts
+
+		&__item
+
+			&:not(:first-child)
+				margin: 30px 0 0
+
+@media (max-width: 660px)
+	.main-contacts
+
+		&__text
+			margin-right: 0
+
+	.mc-links
+		display: block
+
+		&__btn
+			margin: 0
+
+		&__soc
+			margin: 20px 0 0
+
+	.contacts-list
+		display: block
+
+		&__item
+
+			&:not(:last-child)
+				margin: 0 0 20px

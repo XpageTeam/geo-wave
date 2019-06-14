@@ -32,3 +32,40 @@
 
 			&-item
 				margin: -30px 0 0 !important
+
+@media (max-width: 1200px) and (min-width: 1000px)
+	.main-imgs
+
+		&__imgs
+
+			&-img
+				margin: 0 0 -100px
+
+	.imgs-list
+
+		&__item
+			width: 40%
+
+@media (max-width: 1000px)
+	.main-imgs
+
+		&__imgs
+
+			&-img
+				margin: 0 0 20px
+				display: block
+
+	.imgs-list
+
+		&__item
+			width: calc(50% - 10px)
+
+@media (max-width: 660px)
+	.imgs-list
+		display: block
+
+		&__item
+			width: 100%
+
+			&:not(:first-child)
+				margin: 20px 0 0

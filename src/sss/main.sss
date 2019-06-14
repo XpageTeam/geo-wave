@@ -1,6 +1,6 @@
 @import "../css/common.css"
 @import "../css/selectize.css"
-@import "../css/jquery.fancybox.css"
+// @import "../css/jquery.fancybox.css"
 // @import "swiper/dist/css/swiper.css"
 
 @import "_vars.sss"
@@ -47,7 +47,8 @@
 		top: 0
 		bottom: 0
 		font-weight: 300
-		background: #0a0a0a
+		background: var(--main-color)
+		border-left: 1px solid var(--second-color)
 		padding: 20px 0
 		display: flex
 		flex-direction: column
@@ -101,7 +102,7 @@
 					font-size: rem(16) !important
 					padding: 12px 40px 14px 17px !important
 					size: 100% 40px
-					background: url("../img/ico-select-arrow-white.svg") center right 15px no-repeat, #151515
+					background: url("../img/ico-select-arrow.svg") center right 15px no-repeat, rgba(0,0,0, .2)
 					background-size: 8px auto !important
 
 			select.city-select
@@ -143,8 +144,8 @@
 				content: ""
 				position: absolute
 				size: 8px
-				border-bottom: 1px solid #333333
-				border-right: 1px solid #333333
+				border-bottom: 1px solid #fff
+				border-right: 1px solid #fff
 				right: 15px
 				top: calc(50% - 5px)
 				transform: rotate(45deg)
@@ -156,7 +157,7 @@
 			display: block
 
 			&.active
-				background: #333333
+				background: rgba(0,0,0, .2)
 
 		&__personal
 			margin: 30px 0 0
@@ -168,7 +169,7 @@
 
 				&__link
 					border: none
-					background-color: #151515
+					background-color: rgba(0,0,0, .2)
 
 					&:not(:last-child)
 						margin-right: 2px
@@ -187,7 +188,7 @@
 			font-size: rem(16) !important
 			padding: 12px 40px 14px 17px !important
 			size: 100% 40px
-			background: #151515
+			background: rgba(0,0,0, .2)
 			border: none
 			color: #fff
 
@@ -232,7 +233,7 @@
 				&:after
 					content: ""
 					position: absolute
-					background: #151515
+					background: rgba(0,0,0, .2)
 					size: 25px
 					left: 0
 					top: 0
@@ -250,12 +251,13 @@
 			align-items: center
 			position: relative
 			border: none
+			color: #fff
 
 			&:before
 				content: ""
 				size: 25px
 				margin: 0 20px 0 0
-				background-color: #151515
+				background-color: rgba(0,0,0, .2)
 				background-position: center
 				background-repeat: no-repeat
 
@@ -295,13 +297,11 @@
 			span
 				opacity: 0
 
-			$angle: 45deg
-
 			&:before
-				transform: rotate($angle)
+				transform: rotate(45deg)
 
 			&:after
-				transform: rotate(-$angle)
+				transform: rotate(-45deg)
 
 	.head__burger.js__active
 		.burger
@@ -313,10 +313,10 @@
 			$angle: 45deg
 
 			&:before
-				transform: rotate($angle)
+				transform: rotate(45deg)
 
 			&:after
-				transform: rotate(-$angle)
+				transform: rotate(-45deg)
 
 
 
