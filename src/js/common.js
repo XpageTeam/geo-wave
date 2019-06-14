@@ -50,6 +50,16 @@ window.jQuery = $;
 })();
 
 try{
+  const hiddenElements = document.querySelectorAll(".main-imgs__imgs-img, .imgs-list__item"),
+    showElement = (el) => {
+      el.classList.add("animated")
+    };
+
+  for (var el of hiddenElements)
+    if (isScrolledIntoView(el))
+      showElement(el)
+
+  
 	document.addEventListener("DOMContentLoaded", e => {
 		// require("./jquery.fancybox.js")
     require("../js/selectize.min.js")
@@ -64,15 +74,6 @@ try{
 		// 	},
 		// 	transitionEffect: "slide",
 		// })
-    
-    const hiddenElements = document.querySelectorAll(".main-imgs__imgs-img, .imgs-list__item"),
-      showElement = (el) => {
-        el.classList.add("animated")
-      };
-
-    for (var el of hiddenElements)
-      if (isScrolledIntoView(el))
-        showElement(el)
 
     $(window).on("scroll resize", function(){
 

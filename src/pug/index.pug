@@ -56,19 +56,19 @@ html(lang="ru")
 				.wrapper
 					.main-screen
 						.main-screen__bg
-							<!-- ../img/ms-bg.svg -->
-							//- include ../img/ms-bg.svg
+							//- <!-- ../img/ms-bg.svg -->
+							include ../img/ms-bg.svg
 						.main-screen__text
 							.main-text
 								.main-text__text
 									.main-text__text-title 12-14 июля
-									.main-text__text-subtitle Клуб-отель “Золотой пляж”  Миасс оз. Тургояк
+									//- .main-text__text-subtitle Клуб-отель “Золотой пляж”  Миасс оз. Тургояк
 									.text-page
 										p Вот уже в 4 раз на Тургояке пройдет самый летний и сочный музыкальный фестиваль - GEOWAVE! Тебя ожидают 3 дня музыки, отличного настроения и положительных эмоций.
 										p Фестиваль проводиться на площадке клуб-отеля “Золотой пляж”, который расположен на берегу одного из самых чистых и красивых озер России.
 								.main-text__waves
-									//- include ../img/top-wave.svg
-									<!-- ../img/top-wave.svg -->
+									include ../img/top-wave.svg
+									//- <!-- ../img/top-wave.svg -->
 						.main-screen__links 
 							.main-links
 								.main-links__btns
@@ -91,8 +91,8 @@ html(lang="ru")
 							figure.main-img
 								img(src="img/photos/main-imgs-2.jpg")
 				.main-imgs__bg
-					//- include ../img/imgs-waves.svg
-					<!-- ../img/imgs-waves.svg -->
+					include ../img/imgs-waves.svg
+					//- <!-- ../img/imgs-waves.svg -->
 			.headlines__cont
 				.wrapper
 					.headlines__title Хедлайнеры Geowave 2019
@@ -103,13 +103,16 @@ html(lang="ru")
 								.headliner
 									.headliner__img
 										if (i == 0)
-											<!-- ../img/headliner-0.svg -->
+											//- <!-- ../img/headliner-0.svg -->
+											img(src="img/headliner-0.svg")
 											//- include ../img/headliner-0.svg
 										else if (i == 1)
-											<!-- ../img/headliner-1.svg -->
+											//- <!-- ../img/headliner-1.svg -->
+											img(src="img/headliner-1.svg")
 											//- include ../img/headliner-1.svg
 										else
-											<!-- ../img/headliner-2.svg -->
+											img(src="img/headliner-2.svg")
+											//- <!-- ../img/headliner-2.svg -->
 											//- include ../img/headliner-2.svg
 									.headliner__desc
 										.headliner__desc-title
@@ -180,7 +183,7 @@ html(lang="ru")
 													a(href="tel: +7 922 757 23 17") +7 922 757 23 17
 													a(href="mailto: anna-geo@list.ru") anna-geo@list.ru
 						.main-contacts__waves
-							//- include ../img/bot-waves.svg
-							<!-- include ../img/bot-waves.svg -->
+							include ../img/bot-waves.svg
+							//- <!-- include ../img/bot-waves.svg -->
 		include inc/footer.pug
 		include inc/scripts.pug

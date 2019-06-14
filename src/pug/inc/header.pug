@@ -11,6 +11,19 @@ header.head
 							option(value="1") Челябинск
 							option(value="2") Челябинск
 							option(value="3") Челябинск
+				| <div class="popup-mini">
+				| <div class="popup-mini__body">
+				| <div class="popup-mini__title">Ваш город <?=$activeCityName?>?</div>
+				| <div class="popup-mini__controls">
+				| <div class="popup-mini__controls-left">
+				| <a href="javascript:;" onclick="Cookies.set('CONFIRMATION_CITY', 'Y', {expires: 700, path: '/'}); $('.popup-mini').fadeOut(300);" class="comment-form__submit">Да, верно</a>
+				| </div>
+				| <div class="popup-mini__controls-left">
+				| <a href="javascript:;" class="btn-simple">Выбрать другой</a>
+				| </div>
+				| </div>
+				| </div>
+				| </div>
 			.head__nav
 				.main-nav
 					.main-nav__search

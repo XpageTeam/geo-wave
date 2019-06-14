@@ -2,7 +2,7 @@
 	position: relative
 
 	&__cont
-		margin: 85px 0 185px
+		margin: 35px 0 165px
 
 	&__bg
 		position: absolute calc(100% - 80px) calc(100% + 150px) * *
@@ -11,15 +11,12 @@
 			display: block
 			max-width: none
 
-	&__links
-		margin: 40px 0 0
-
 .main-text
 	display: flex
 
 	&__text
 		align-self: center
-		margin-right: 65px
+		// margin-right: 65px
 		flex: 1 1 auto
 
 		&-title
@@ -33,7 +30,7 @@
 			line-height: calc(23 / 16)
 
 	&__waves
-		margin-right: -68px
+		margin-right: -90px
 		flex: none
 
 .main-links
@@ -54,8 +51,9 @@
 	display: inline-block
 
 .white-btn
-	color: #000 #fff
+	color: var(--main-color) #fff
 	padding: 14px 23px 15px
+	font-weight: bold
 
 .ht-btn
 	border-radius: 100px
@@ -68,6 +66,12 @@
 
 	&__link
 		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+
+		img
+			transform: scale(1.2)
 
 		&:before
 			content: ""
@@ -147,3 +151,5 @@
 
 		&__soc
 			margin: 20px 0 0
+
+	
