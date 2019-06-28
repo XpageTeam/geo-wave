@@ -98,7 +98,7 @@ html(lang="ru")
 					.headlines__title Хедлайнеры Geowave 2019
 					.headlines__subtitle Приехали из разных стран, но говорят на одном языке. Для музыки нет границ и нет рамок. 3 дня для вас будут играть:
 					.headlines__list
-						each item, i in [{name: "Chaim ", country: "israel", text: "CHAIM - артист, чьи прогрессивные ритмы и необычные сочетания стилей закрадываются глубоко в душу и заставляют танцевать. Его релизы можно услышать на таких лейблах, как BPitch Berlon RUMORS, Supplement Facts Records, Saved Records, Cocoon Recordings"}, {name: "Guessbeats", country: "nld", text: "GuessBeats - еще в молодом возрасте этот артист стал заниматься музыкой в стиле house. Постепенно преобразовываясь, его музыка нашла уникальное звучание, которое оценили на фестивале Toren, Circle, Electronic Picknick, где GuessBeats выступал в дуэте с Kidmalone"}, {name: "Fanny West", country: "nld", text: "Fanny West - уникальный музыкант, создающий знойную музыку, которая заставляет танцевать. Вокал, взрывные ритмы делают выступления Fanny West незабываемыми. Постоянный участник фестивалей Parkpop, Lowlands, Latin Village и Pinkpop"}, ]
+						each item, i in [{name: "Chaim ", country: "israel", text: "CHAIM - артист, чьи прогрессивные ритмы и необычные сочетания стилей закрадываются глубоко в душу и заставляют танцевать. Его релизы можно услышать на таких лейблах, как BPitch Berlon RUMORS, Supplement Facts Records, Saved Records, Cocoon Recordings"}, {name: "Guessbeats", country: "nld", text: "GuessBeats - еще в молодом возрасте этот артист стал заниматься музыкой в стиле house. Постепенно преобразовываясь, его музыка нашла уникальное звучание, которое оценили на фестивале Toren, Circle, Electronic Picknick, где GuessBeats выступал в дуэте с Kidmalone"}, {name: "Fanny West", country: "nld", text: "Fanny West - уникальный музыкант, создающий знойную музыку, которая заставляет танцевать. Вокал, взрывные ритмы делают выступления Fanny West незабываемыми. Постоянный участник фестивалей Parkpop, Lowlands, Latin Village и Pinkpop"}, {name: "Guessbeats", country: "NLD", text: "GuessBeats - еще в молодом возрасте этот артист стал заниматься музыкой в стиле house. Постепенно преобразовываясь, его музыка нашла уникальное звучание, которое оценили на фестивале Toren, Circle, Electronic Picknick, где GuessBeats выступал в дуэте с Kidmalone"}, {name: "Fanny West", country: "NLD", text: "Fanny West - уникальный музыкант, создающий знойную музыку, которая заставляет танцевать. Вокал, взрывные ритмы делают выступления Fanny West незабываемыми. Постоянный участник фестивалей Parkpop, Lowlands, Latin Village и Pinkpop"}]
 							.headlines__list-item
 								.headliner
 									.headliner__img
@@ -110,10 +110,14 @@ html(lang="ru")
 											//- <!-- ../img/headliner-1.svg -->
 											img(src="img/headliner-1.svg")
 											//- include ../img/headliner-1.svg
-										else
+										else if (i == 2)
 											img(src="img/headliner-2.svg")
 											//- <!-- ../img/headliner-2.svg -->
 											//- include ../img/headliner-2.svg
+										else if (i == 3)
+											img(src="img/headliner-3.svg")
+										else
+											img(src="img/headliner-4.svg")
 									.headliner__desc
 										.headliner__desc-title
 											.lh-title=item.name
